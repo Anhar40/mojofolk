@@ -8,12 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "vercel-build": "vite build",
-    "postbuild": "react-snap"
-  },
-  "reactSnap": {
-    "inlineCss": true,
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
+    "vercel-build": "vite build"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",
