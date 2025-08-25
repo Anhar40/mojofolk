@@ -8,7 +8,12 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "vercel-build": "vite build"
+    "vercel-build": "vite build",
+    "postbuild": "react-snap"
+  },
+  "reactSnap": {
+    "inlineCss": true,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",
@@ -37,6 +42,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^4.1.12",
     "vite": "^7.0.4",
     "vite-plugin-prerender": "^1.0.8"

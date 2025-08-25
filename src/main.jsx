@@ -20,6 +20,7 @@ AOS.init();
 
 
 createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <HelmetProvider>   
       <BrowserRouter>
         <Preloader />
@@ -37,4 +38,5 @@ createRoot(document.getElementById('root')).render(
         </div>
       </BrowserRouter>
     </HelmetProvider>
+  </React.StrictMode>
 );
