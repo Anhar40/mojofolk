@@ -7,6 +7,7 @@ export default defineConfig({
     tailwindcss(),
     react(),
   ],
+  base: "/",
   server: {
     allowedHosts: true, // membebaskan semua host
     host: true,         // biar bisa diakses dari jaringan luar
