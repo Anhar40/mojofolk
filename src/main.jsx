@@ -1,4 +1,4 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
@@ -13,16 +13,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './pages/About.jsx';
 import { Service } from './pages/Service.jsx';
 import Project from './pages/Project.jsx';
-import { HelmetProvider } from "react-helmet-async";  // ⬅️ ganti ini
+import { HeadProvider } from "react-head";
 
 
 AOS.init();
 
-
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter basename="/">
+  <StrictMode>
+    <HeadProvider>
+      <BrowserRouter>
         <Preloader />
         <Navbar />
         <div className="overflow-x-hidden">
@@ -37,6 +36,6 @@ createRoot(document.getElementById('root')).render(
           </div>
         </div>
       </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>
+    </HeadProvider>
+  </StrictMode>
 );

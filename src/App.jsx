@@ -1,8 +1,9 @@
 import CalltoAction from "./components/CalltoAction";
+import DataImage from "./data";
 import { listClient } from './data';
 import { listBidangUsaha } from "./data"
 import { Link } from 'react-router-dom';
-import { Helmet } from "react-helmet-async"
+import MetaSeo from "./components/Metaseo";
 
 
 
@@ -12,25 +13,7 @@ function App() {
     <>
 
       {/* SEO */}
-      <Helmet>
-        <title>Mojo Folks - IT Agency</title>
-        <meta name="description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh dengan solusi digital." />
-        <meta name="keywords" content="Website Developer Mataram, IT Consultant Mataram, Website Developer Lombok, IT Agency NTB, Jasa Pembuatan Website Mataram, Mojo Folks" />
-
-        {/* Open Graph (FB, WhatsApp, LinkedIn) */}
-        <meta property="og:title" content="Mojo Folks - Profesional IT Agency" />
-        <meta property="og:description" content="Layanan kreatif Mojo Folks untuk membantu bisnis Anda tumbuh." />
-        <meta property="og:image" content="https://mojofolks.com/assets/img/programmer.webp" />
-        <meta property="og:url" content="https://mojofolks.com" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mojo Folks - Profesional IT Agency" />
-        <meta name="twitter:description" content="Solusi digital kreatif untuk bisnis Anda. Website developer dan IT consultant di Lombok & Bima." />
-        <meta name="twitter:image" content="https://mojofolks.com/assets/img/programmer.webp" />
-      </Helmet>
-
+      <MetaSeo />
 
       <script
         type="application/ld+json"
