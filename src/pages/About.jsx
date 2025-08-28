@@ -4,7 +4,7 @@ import { } from "module";
 import CalltoAction from '../components/CalltoAction';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
-import Seoabout from '../components/Seoabout';
+
 
 
 
@@ -13,7 +13,6 @@ const About = () => {
 
   return (
     <>
-      <Seoabout />
 
       <script
         type="application/ld+json"

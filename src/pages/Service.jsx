@@ -5,7 +5,6 @@ import { Services } from "../components/Services";
 import { useState } from "react";
 import CalltoAction from '../components/CalltoAction';
 import { Test } from "../components/Test";
-import SeoService from '../components/Metasoservice';
 
 
 
@@ -13,7 +12,6 @@ export const Service = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <SeoService />  
 
       <script
         type="application/ld+json"

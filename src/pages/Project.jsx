@@ -3,7 +3,8 @@ import { listProyek } from '../data';
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import CalltoAction from "../components/CalltoAction";
 import "aos/dist/aos.css";
-import SeoProject from "../components/Seoproject";
+
+
 
 const Project = () => {
 
@@ -42,7 +43,6 @@ const Project = () => {
 
     return (
         <>
-            <SeoProject />
 
             {!selectedProject && (
                 <>

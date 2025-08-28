@@ -3,7 +3,6 @@ import DataImage from "./data";
 import { listClient } from './data';
 import { listBidangUsaha } from "./data"
 import { Link } from 'react-router-dom';
-import MetaSeo from "./components/Metaseo";
 
 
 
@@ -13,7 +12,6 @@ function App() {
     <>
 
       {/* SEO */}
-      <MetaSeo />
 
       <script
         type="application/ld+json"

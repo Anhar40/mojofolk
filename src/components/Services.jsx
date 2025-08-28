@@ -1,15 +1,10 @@
 import React from 'react'
-import { Title, Meta } from "react-head";
+
 
 export const Services = () => {
     return (
         <>
 
-            <Title>Mojo Folks - Layanan IT & Konsultasi</Title>
-            <Meta
-                name="description"
-                content="Mojo Folks menyediakan layanan Web Development, Branding, SEO, dan IT Consulting di Mataram & Bima."
-            />
             {/* Structured Data (JSON-LD) */}
             <script
                 type="application/ld+json"
