@@ -7,31 +7,37 @@ import "aos/dist/aos.css";
 
 
 const Project = () => {
-
     const [selectedProject, setSelectedProject] = useState(null);
     const [visibleProjectsCount, setVisibleProjectsCount] = useState(5);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
-    // Membuat ref untuk bagian daftar proyek
     const projectsSectionRef = useRef(null);
 
     const handleViewProject = (project) => {
+        // Simpan posisi scroll sebelum masuk detail
+        setLastScrollY(window.scrollY);
+
+        // Set project yang dipilih
         setSelectedProject(project);
+
+        // Scroll otomatis ke atas biar tampilan detail mulai dari atas
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     };
 
+
     const handleBackToList = () => {
-        // Mengatur ulang state untuk kembali ke daftar proyek
         setSelectedProject(null);
 
-        // Menggunakan setTimeout untuk memberi waktu render
-        // sebelum melakukan scroll
+        // Balikin ke posisi scroll sebelum buka detail
         setTimeout(() => {
-            if (projectsSectionRef.current) {
-                projectsSectionRef.current.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }, 100); // Penundaan 100ms sudah cukup
+            window.scrollTo({
+                top: lastScrollY,
+                behavior: "smooth",
+            });
+        }, 100);
     };
 
     const handleLoadMore = () => {
@@ -46,7 +52,7 @@ const Project = () => {
 
             {!selectedProject && (
                 <>
-                   
+
 
                     <script
                         type="application/ld+json"
